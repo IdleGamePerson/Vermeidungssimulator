@@ -1,0 +1,125 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+#menu {
+    width: 100%;
+    height: 100vh;
+    background: #f0f0f0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#ring-counter {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+}
+
+#upgrade-tree {
+    display: grid;
+    grid-template-columns: repeat(5, 80px);
+    grid-template-rows: repeat(5, 80px);
+    gap: 5px;
+    background: #ddd;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.upgrade {
+    width: 75px;
+    height: 75px;
+    background: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    text-align: center;
+    border: 2px solid #999;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    padding: 5px;
+}
+
+.upgrade.bought {
+    background: lightgreen;
+}
+
+#start-game {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 20px;
+}
+
+#game-canvas {
+    display: none;
+    background: #eee;
+}
+
+#countdown {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    font-weight: bold;
+    color: black;
+    pointer-events: none;
+}
+
+#start-game:disabled {
+    background: gray;
+    cursor: not-allowed;
+}
+
+#button-row {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+#button-row button {
+    height: 60px;
+    min-width: 140px;
+    padding: 0 20px;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    box-sizing: border-box;
+    border: 1px solid #999;
+    background: linear-gradient(to bottom, #f6f6f6, #ddd);
+}
+
+#lose-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    font-size: 20px;
+    text-align: center;
+}
+
+#lose-screen button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+}

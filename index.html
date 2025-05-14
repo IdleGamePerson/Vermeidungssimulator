@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Vermeidungssimulator 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="menu">
+        <div id="ring-counter">Schwarze Ringe: 0</div>
+        <div id="upgrade-tree"></div>
+        <div id="button-row">
+            <button id="save-game">Speichern</button>
+            <button id="start-game">Starte Spiel</button>
+            <button id="load-game">Laden</button>
+        </div>
+
+    </div>
+    
+    <canvas id="game-canvas"></canvas>
+    <div id="lose-screen" style="display: none;">
+        <h2>Du hast verloren!</h2>
+        <div id="lose-details"></div>
+        <button id="close-lose">OK</button>
+    </div>
+
+    <div id="countdown" style="display: none;">3</div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
